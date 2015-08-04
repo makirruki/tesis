@@ -140,6 +140,15 @@ SHOP_OPTION_TYPE_CHOICES = (
 #     ),
 # )
 
+EXTRA_MODEL_FIELDS = (
+    (
+         "cartridge.shop.models.Order.callback_uuid",
+         "django.db.models.CharField",
+         (),
+         {"blank" : False, "max_length" : 36},
+     ),
+)
+
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
 # BLOG_USE_FEATURED_IMAGE = True
@@ -157,6 +166,7 @@ USE_SOUTH = True
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
+    ('Macarena Bueno', 'bueno.macarena@gmail.com')
     # ('Your Name', 'your_email@domain.com'),
 )
 MANAGERS = ADMINS
@@ -200,7 +210,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
